@@ -4,14 +4,18 @@
     --text-color:#fff;
     --text-color2:#ce0000;
     --header-bg: rgba(0,0,0,0.8);
+    --border: rgba(196, 7, 7, 0.8);
+    --shadow: #ff0000;
 }
 
 .light-mode{
-    --color-primary:#f0f0f0;
-    --bg-dark:#f0f0f0;
+    --color-primary:#ffffff;
+    --bg-dark:#e4e3e3;
     --text-color:#141414;
-    --text-color2:#330737;
-    --header-bg: rgba(200,200,200,0.9);
+    --text-color2:#55c887;
+    --header-bg: rgba(64, 62, 72, 0.568);
+    --border: rgb(8, 149, 86);
+    --shadow: #55c887;
 }
 
 *{
@@ -35,36 +39,43 @@ header{
     padding: 20px 5%;
     background: var(--header-bg);
     list-style: none;
+    box-shadow: 0 0 15px var(--border);
 }
 
 .logo{
     padding:10px;
-    font-family: sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     display: inline-block;
-    color: #fff;
+    color: white;
     letter-spacing: 3px;
     animation: brilho 2s infinite alternate;
+    font-weight: 1000;
+    font-size: 40px;
 }
 
 .logo span{
-    color: #ff0000;
+    position: relative;
+    color: var(--shadow);
+    font-size: 25px;
+    text-align: right;
+    bottom: 3px;
 }
 
 /* animação principal */
 @keyframes brilho {
     0%{
         text-shadow:
-        0 0 5px #ff0000,
-        0 0 10px #ff0000,
-        0 0 20px #ff0000;
+        0 0 5px var(--shadow),
+        0 0 10px var(--shadow),
+        0 0 20px var(--shadow);
         transform: scale(1);
     }
 
     100%{
         text-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ff0000,
-        0 0 40px #ff0000;
+        0 0 10px var(--shadow),
+        0 0 20px var(--shadow),
+        0 0 40px var(--shadow);
         transform: scale(1.05);
     }
 }
@@ -77,24 +88,24 @@ header{
     from{
         transform: scale(1.05);
         text-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ff0000,
-        0 0 40px #ff0000;
+        0 0 10px var(--shadow),
+        0 0 20px var(--shadow),
+        0 0 40px var(--shadow);
     }
 
     to{
         transform: scale(1.15);
         text-shadow:
-        0 0 20px #ff0000,
-        0 0 40px #ff0000,
-        0 0 60px #ff0000;
+        0 0 20px var(--shadow),
+        0 0 40px var(--shadow),
+        0 0 60px var(--shadow);
     }
 }
 
 @keyframes acender {
     to {
         color: #fff;
-        text-shadow: 0 0 10px #e11a1a, 0 0 20px #8d5959;
+        text-shadow: 0 0 10px var(--shadow), 0 0 20px #8d5959;
     }
 }
 
@@ -134,7 +145,7 @@ header nav ul li a:hover{
     text-decoration: none;
     color: var(--color5);
     font-weight:500;
-   padding: 30px;
+    padding: 30px;
 }
 .mode{
     width:40px;
@@ -204,4 +215,104 @@ header nav ul li a:hover{
 
 main{
     min-height: 80vh;
+}
+
+#inicio{
+    position: fixed;
+    top: 0;
+    left: 0;
+ 
+    width: 100%;
+    height: 100vh;
+ 
+    background-color: rgb(0, 0, 0);
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    z-index: 9999;
+ 
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+ 
+#imgHero{
+    width:220px;
+    animation: piscar 2s infinite;
+    animation: rodar 2s;
+    border-radius: 50%;
+}
+ @keyframes rodar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+#titulo{
+    color: rgba(90, 16, 16, 0.88);
+ 
+    margin-top:15px;
+ 
+    font-size:2rem;
+ 
+    letter-spacing:2px;
+}
+ 
+/* BARRA */
+ 
+.barra{
+    width:260px;
+    height:10px;
+ 
+    border:1px solid rgba(90, 16, 16, 0.88);
+ 
+    border-radius:20px;
+ 
+    overflow:hidden;
+ 
+    margin-top:20px;
+}
+ 
+.progresso{
+    width:0%;
+    height:100%;
+ 
+    background:rgba(90, 16, 16, 0.88);
+ 
+    animation: carregar 1s linear forwards;
+}
+ 
+/* ANIMAÇÕES */
+ 
+@keyframes carregar{
+    from{
+        width:0%;
+    }
+ 
+    to{
+        width:100%;
+    }
+}
+ 
+@keyframes piscar{
+    0%{
+        opacity: 0.5;
+    }
+ 
+    50%{
+        opacity: 1;
+    }
+ 
+    100%{
+        opacity: 0.5;
+    }
+}
+ 
+.efeito-out{
+    opacity:0;
+    pointer-events:none;
 }
