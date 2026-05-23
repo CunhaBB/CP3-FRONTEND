@@ -391,3 +391,155 @@ main{
     text-align: center;
     padding: 60px;
 }
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-home{
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero-home img{
+        width: 220px;
+    }
+
+    .frase{
+        font-size: 18px;
+        padding: 30px;
+    }
+
+    .diferenciais{
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .box{
+        width: 200px;
+    }
+
+    .promo-home{
+        padding: 40px;
+    }
+
+    .cta{
+        padding: 40px;
+    }
+}
+
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .logo span{
+        font-size: 18px;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links ul li{
+        padding: 5px;
+    }
+
+    .nav-links ul li a:hover{
+        transform: none; /* evita zoom bugado no mobile */
+    }
+
+    .hero-home{
+        padding: 50px 15px;
+    }
+
+    .hero-home img{
+        width: 180px;
+    }
+
+    .hero-home p{
+        font-size: 16px;
+    }
+
+    .btn-main{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .frase{
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .diferenciais{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .box{
+        width: 90%;
+    }
+
+    .promo-home{
+        padding: 30px 20px;
+        font-size: 18px;
+    }
+
+    .cta{
+        padding: 30px 20px;
+    }
+
+    /* footer */
+    .container-footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px){
+
+    .hero-home img{
+        width: 150px;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .frase{
+        font-size: 14px;
+    }
+
+    .btn-main{
+        font-size: 14px;
+        padding: 10px;
+    }
+}
