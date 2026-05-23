@@ -310,3 +310,145 @@ main{
 .membro img{
     width: 100px;
 }
+
+@media (max-width: 1024px){
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sobre-hero h1{
+        font-size: 40px;
+    }
+
+    .sobre-conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .sobre-texto{
+        max-width: 100%;
+    }
+
+    .sobre-img img{
+        max-width: 300px;
+    }
+
+    .missao{
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .card-sobre{
+        width: 220px;
+    }
+
+    .grid-equipe{
+        gap: 20px;
+    }
+}
+
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .logo span{
+        font-size: 18px;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links ul li{
+        padding: 5px;
+    }
+
+    .nav-links ul li a:hover{
+        transform: none;
+    }
+
+    .sobre-hero{
+        padding: 60px 20px;
+    }
+
+    .sobre-hero h1{
+        font-size: 32px;
+    }
+
+    .sobre-conteudo{
+        padding: 30px 20px;
+    }
+
+    .sobre-img img{
+        max-width: 250px;
+    }
+
+    .missao{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .card-sobre{
+        width: 90%;
+    }
+
+    .equipe{
+        padding: 30px 20px;
+    }
+
+    .grid-equipe{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membro{
+        width: 90%;
+    }
+
+    /* footer fix */
+    .container-footer{
+        flex-direction: column;
+        text-align: center;
+        left: 0;
+    }
+}
+
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px){
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .sobre-hero h1{
+        font-size: 26px;
+    }
+
+    .card-sobre{
+        padding: 20px;
+    }
+
+    .membro img{
+        width: 80px;
+    }
+}
