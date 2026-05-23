@@ -164,13 +164,12 @@ header nav ul li a:hover{
 
 .container-footer{
     display: flex;
-    position: relative;
     justify-content: space-between;
     flex-wrap: wrap;
-    left: 120px;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* centraliza */
 }
-
 .coluna-footer{
     flex: 1;
     min-width: 200px;
@@ -315,4 +314,80 @@ main{
 .efeito-out{
     opacity:0;
     pointer-events:none;
+}
+
+.hero-home{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #000 20%, var(--bg-dark));
+}
+
+.hero-home img{
+    width: 300px;
+    color: var(--text-color2);
+    text-shadow: 0 0 20px var(--shadow);
+    border-radius: 80%;
+}
+
+.hero-home p{
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.btn-main{
+    padding: 12px 30px;
+    border: none;
+    background: var(--text-color2);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-main:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--shadow);
+}
+
+.frase{
+    text-align: center;
+    padding: 40px;
+    font-size: 22px;
+}
+
+.diferenciais{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.box{
+    background: var(--header-bg);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--border);
+}
+
+.box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--shadow);
+}
+
+.promo-home{
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(90deg, var(--text-color2), transparent);
+}
+
+.cta{
+    text-align: center;
+    padding: 60px;
 }
