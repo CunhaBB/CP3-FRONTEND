@@ -375,3 +375,148 @@ main{
     color: var(--text-color2);
     margin-bottom: 10px;
 }
+
+@media (max-width: 1024px){
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio{
+        padding: 30px 4%;
+    }
+
+    .titulo{
+        text-align: center;
+    }
+
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card-game img{
+        height: 250px;
+    }
+
+    .tabela{
+        font-size: 14px;
+    }
+
+    .promocoes{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .logo span{
+        font-size: 18px;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links ul li{
+        padding: 5px;
+    }
+
+    .nav-links ul li a:hover{
+        transform: none;
+    }
+
+    .portfolio{
+        padding: 20px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .card-game img{
+        height: 220px;
+    }
+
+    .info h3{
+        font-size: 16px;
+    }
+
+    .preco{
+        font-size: 16px;
+    }
+
+    .card-game button{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* tabela scroll horizontal (importante) */
+    .tabela{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* promoções */
+    .promocoes{
+        grid-template-columns: 1fr;
+    }
+
+    .promo{
+        padding: 15px;
+    }
+
+    /* footer */
+    .container-footer{
+        flex-direction: column;
+        text-align: center;
+        left: 0; /* corrige bug de deslocamento */
+    }
+}
+
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px){
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .titulo{
+        font-size: 18px;
+    }
+
+    .card-game img{
+        height: 200px;
+    }
+
+    .info{
+        padding: 10px;
+    }
+
+    .preco{
+        font-size: 14px;
+    }
+
+    .card-game button{
+        font-size: 13px;
+    }
+}
