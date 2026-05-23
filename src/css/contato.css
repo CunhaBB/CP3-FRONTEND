@@ -313,3 +313,83 @@ main{
     background: rgba(0,255,0,0.1);
     border: 1px solid green;
 }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px){
+
+    .contato-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-contato,
+    .info-contato{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contato-hero h1{
+        font-size: 32px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px){
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    header nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li{
+        padding: 10px;
+    }
+
+    header nav ul li a:hover{
+        transform: scale(1.2);
+    }
+
+    .contato-hero{
+        padding: 50px 15px;
+    }
+
+    .contato-hero h1{
+        font-size: 26px;
+    }
+
+    .form-contato,
+    .info-contato{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-contato input,
+    .form-contato textarea{
+        font-size: 14px;
+    }
+
+    .form-contato button{
+        font-size: 14px;
+    }
+
+    .container-footer{
+        left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .coluna-footer{
+        min-width: 100%;
+    }
+}
